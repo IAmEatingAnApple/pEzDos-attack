@@ -1,6 +1,10 @@
+print("Инициализация...")
 import requests
 from colorama import Fore, Style, Back
-site = input("Введите сайт: ")
+from os import system
+system("clear")
+site = input(Back.RED + Fore.BLACK + "Введите сайт: ")
+print(Style.RESET_ALL)
 i = 1
 while True:
 	response = requests.get(f"http://{site}").text
