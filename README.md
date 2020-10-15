@@ -4,7 +4,7 @@
 2. pkg update && pkg upgrade
 3. apt install git
 4. pkg install python
-5. git clone https://guthub.com/IAmEatingAnApple/pEzDos-attack
+5. git clone https://github.com/IAmEatingAnApple/pEzDos-attack
 6. cd pEzDos-attack
 7. python dos.py
 
