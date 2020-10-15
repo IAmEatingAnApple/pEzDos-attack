@@ -28,7 +28,7 @@ try:
 	site2 = f"http://{site}"
 	print(Style.RESET_ALL)
 	op = input("Открыть атакуемый сайт? y/n: ")
-	force = int(input("Введите силу аттаки: "))
+	force = int(input("Введите силу аттаки (Default - 1): "))
 	if op == "n" or op == "N":
 		print("Атака начинается...")
 		print("Чтобы прервать атаку нажмите ctrl+z")
