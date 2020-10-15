@@ -1,14 +1,12 @@
 # pEzDos-attack
 Установка досилки на термукс:
-1. apt update
-2. apt upgrade
-3. pkg update
-4. pkg upgrade
-5. apt install git
-6. pkg install python
-7. git clone https://guthub.com/IAmEatingAnApple/pEzDos-attack
-8. cd pEzDos-attack
-9. python dos.py
+1. apt update && apt upgrade
+2. pkg update && pkg upgrade
+3. apt install git
+4. pkg install python
+5. git clone https://guthub.com/IAmEatingAnApple/pEzDos-attack
+6. cd pEzDos-attack
+7. python dos.py
 
 Вводим название сайта, мощность, и запускаем!
 Приятного пользования.
