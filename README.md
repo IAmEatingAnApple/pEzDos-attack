@@ -1,4 +1,4 @@
-# pEzDos-attack
+# prettyEasyDosAttack
 Установка досилки на термукс:
 1. apt update && apt upgrade
 2. pkg update && pkg upgrade
