@@ -35,7 +35,8 @@ try:
 ▐░▌       ▐░▌     ▐░▌          ▐░▌     ▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░▌  ▐░▌
  ▀         ▀       ▀            ▀       ▀         ▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀    ▀                                                                                                                                     
 '''
-		print(Fore.RED + f'{logotip}' + Style.RESET_ALL)
+		print(Fore.RED + f'{logotip}')
+		print(Style.RESET_ALL)
 
 
 	thread_list=[]
