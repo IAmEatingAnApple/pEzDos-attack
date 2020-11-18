@@ -35,7 +35,7 @@ try:
 ▐░▌       ▐░▌     ▐░▌          ▐░▌     ▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░▌  ▐░▌
  ▀         ▀       ▀            ▀       ▀         ▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀    ▀                                                                                                                                     
 '''
-		print(Fore.RED + f"{logotip}" + Style.RESET_ALL)
+		print(Fore.RED + f'{logotip}' + Style.RESET_ALL)
 
 
 	thread_list=[]
@@ -46,13 +46,13 @@ try:
 		i = 1	
 		while True:
 			try:
-				response = requests.get(f"{site2}").text
+				response = requests.get(f'{site2}').text
 				print(Fore.YELLOW + response)
 				print(Fore.GREEN + f"Пакет послан {i}")
 				print(Style.RESET_ALL)
 				i = i + 1
 			except requests.exceptions.ConnectionError:
-				print(Fore.RED + "Такого сайта нет" + Style.RESET_ALL)
+				print(Fore.RED + 'Такого сайта нет' + Style.RESET_ALL)
 				exit()	
 
 	def main():
