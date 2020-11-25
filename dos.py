@@ -64,7 +64,6 @@ try:
 		global html
 		system("clear")
 		system("cls")
-		logo()
 		time.sleep(2)
 		print(Fore.RED + (f"{logo}") + Style.RESET_ALL)
 		site = input(Back.RED + Fore.BLACK + "Введите сайт: ")
