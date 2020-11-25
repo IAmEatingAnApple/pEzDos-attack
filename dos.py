@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from os import system
+from os import system, name
 try:
 	print("Инициализация...")
 	import requests, webbrowser
@@ -40,6 +40,9 @@ try:
 
 
 	thread_list=[]
+	
+	def clear():
+		system('cls' if name=='nt' else 'clear')
 
 
 	def attack(n, name):
@@ -62,10 +65,9 @@ try:
 	def main():
 		global site2
 		global html
-		system("clear")
-		system("cls")
-		print(Fore.RED) 
-                logo() 
+		clear()
+		print(Fore.RED)
+		logo()
 		site = input(Back.RED + Fore.BLACK + "Введите сайт: ")
 		site2 = f"http://{site}"
 		print(Style.RESET_ALL)
